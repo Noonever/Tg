@@ -3,7 +3,7 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from asyncio import sleep
 
-bot = Bot(token="5810830070:AAG22oUpP8joFO20DlYScOow-qnoj1ZiHOo")
+bot = Bot(token="")
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 
