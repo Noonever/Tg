@@ -7,8 +7,8 @@ bot = Bot(token="5810830070:AAG22oUpP8joFO20DlYScOow-qnoj1ZiHOo")
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 
-text1 = "❗Щоб активувати чек, підпишіться на канали❗"
-text2 = "❗Партнери платять нам, а ми вам, підпишіться на канали та отримайте винагороду❗" 
+text_1 = "❗Партнери платять нам, а ми вам, підпишіться на канали та отримайте винагороду❗"
+text_2 = "❗Щоб активувати чек, підпишіться на канали❗"
 
 buttons_data = {
     "Подписаться 1": "https://cryptyt.com/go/um4wOUUJMkeQXHQGUTEFQ",
@@ -38,13 +38,13 @@ for label,link in buttons_data2.items():
 async def start1(update: types.ChatJoinRequest):
     await bot.send_message(
         chat_id=update.from_user.id, 
-        text=text1,
+        text=text_1,
         reply_markup=kb
     )
     await sleep(45)
     await bot.send_message(
         chat_id=update.from_user.id, 
-        text=text2,
+        text=text_2,
         reply_markup=kb2
     )
 
